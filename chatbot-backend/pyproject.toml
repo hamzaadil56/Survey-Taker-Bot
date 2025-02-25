@@ -1,21 +1,23 @@
-[tool.poetry]
+[project]
 name = "chatbot-backend"
 version = "0.1.0"
 description = "AI Chatbot Backend Application"
-authors = ["Your Name <your.email@example.com>"]
+requires-python = ">=3.9.0, <4.0.0"
+dependencies = [
+    "fastapi>=0.68.0,<0.69.0",
+    "uvicorn>=0.15.0,<0.16.0",
+    "pydantic>=1.8.2,<2.0.0",
+    "python-dotenv>=0.19.0,<0.20.0",
+    "langchain>=0.2.5",
+]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-fastapi = "^0.68.0"
-uvicorn = "^0.15.0"
-pydantic = "^1.8.2"
-python-dotenv = "^0.19.0"
-
-[tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
-black = "^21.7b0"
-flake8 = "^3.9.2"
-mypy = "^0.910"
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2.5,<7.0.0",
+    "black>=21.7b0,<22.0.0",
+    "flake8>=3.9.2,<4.0.0",
+    "mypy>=0.910,<1.0.0"
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
