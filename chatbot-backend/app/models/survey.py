@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Text, ForeignKey, DateTime, Enum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
-from app.db.models import Base
+from app.models.base import Base
 from app.constants import SURVEY_STATUS_DRAFT, SURVEY_STATUS_ACTIVE, SURVEY_STATUS_COMPLETED, SURVEY_STATUS_ARCHIVED
 
 
